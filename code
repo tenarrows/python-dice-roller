@@ -1,0 +1,127 @@
+# This will be a dice rolling simulator.
+# A person can input a dice from this list: d4, d6, d8, d10, d12, d20, and d100
+# Then they can choose how many of those dice they'd like to roll (1-20)
+
+import random
+
+def dice_4():
+    z = []
+    n = howManyRolls
+    currentRolls = 0
+    while currentRolls < n:
+        x = random.randint(1, 4)
+        z.append(x)
+        currentRolls += 1
+    print(z)
+    print('The sum of your rolls are ' + str(sum(z)))
+
+def dice_6():
+    z = []
+    n = howManyRolls
+    currentRolls = 0
+    while currentRolls < n:
+        x = random.randint(1, 6)
+        z.append(x)
+        currentRolls += 1
+    print(z)
+    print('The sum of your rolls are ' + str(sum(z)))
+
+def dice_8():
+    z = []
+    n = howManyRolls
+    currentRolls = 0
+    while currentRolls < n:
+        x = random.randint(1, 8)
+        z.append(x)
+        currentRolls += 1
+    print(z)
+    print('The sum of your rolls are ' + str(sum(z)))
+
+def dice_10():
+    z = []
+    n = howManyRolls
+    currentRolls = 0
+    while currentRolls < n:
+        x = random.randint(1, 10)
+        z.append(x)
+        currentRolls += 1
+    print(z)
+    print('The sum of your rolls are ' + str(sum(z)))
+
+def dice_12():
+    z = []
+    n = howManyRolls
+    currentRolls = 0
+    while currentRolls < n:
+        x = random.randint(1, 12)
+        z.append(x)
+        currentRolls += 1
+    print(z)
+    print('The sum of your rolls are ' + str(sum(z)))
+
+def dice_20():
+    z = []
+    n = howManyRolls
+    currentRolls = 0
+    while currentRolls < n:
+        x = random.randint(1, 20)
+        z.append(x)
+        currentRolls += 1
+    print(z)
+    print('The sum of your rolls are ' + str(sum(z)))
+
+def dice_100():
+    z = []
+    n = howManyRolls
+    currentRolls = 0
+    while currentRolls < n:
+        x = random.randint(1, 100)
+        z.append(x)
+        currentRolls += 1
+    print(z)
+    print('The sum of your rolls are ' + str(sum(z)))
+
+rollsGo = True
+invalidValue = False
+
+print('Welcome to the dice simulator! You can roll a d4, d6, d8')
+print('d10, d12, d20 or d100! You can also choose to roll')
+print('up to 20 of your selected die!')
+
+print(' ')
+print(' ')
+
+while rollsGo == True:
+    print('What dice would you like to roll? (type as: 4, 6, 8, 10, 12, 20, or 100?')
+
+
+    diceInput = input() 
+    if diceInput != '4 6 8 10 12 20 100'.split(): # This is where I would like to make it so if the player puts in
+        print('Enter a valid number')             #  the wrong number it will skip to 'Would you like to try again?'
+
+    howManyRolls = input(('And how many times would you like me to roll that dice?(1-20)'))
+
+    howManyRolls = int(howManyRolls)
+    diceInput = int(diceInput)
+
+    if diceInput == 4:
+        dice_4()
+    if diceInput == 6:
+         dice_6()
+    if diceInput == 8:
+        dice_8()
+    if diceInput == 10:
+        dice_10()
+    if diceInput == 12:
+        dice_12()
+    if diceInput == 20:
+        dice_20()
+    if diceInput == 100:
+        dice_100()
+
+    print('Would you like to try again?')
+    playAgainAns = input().lower()
+    if playAgainAns == 'y'.lower() or 'yes'.lower():
+        rollsGo = True
+    else:
+        break
